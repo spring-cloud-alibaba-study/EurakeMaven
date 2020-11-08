@@ -64,13 +64,13 @@ public class LogsAspect {
         sysLog.setMethod(className + "." + methodName + "()");
         sysLog.setResponseTime(String.valueOf(time));
         // 获取request
-        HttpServletRequest request = RequestUtils.getHttpServletRequest();
-        String studentNumber = request.getHeader("studentNumber");
-        String name = request.getHeader("name");
-        String user = name + "+" + studentNumber;
+//        HttpServletRequest request = RequestUtils.getHttpServletRequest();
+//        String studentNumber = request.getHeader("studentNumber");
+//        String name = request.getHeader("name");
+//        String user = name + "+" + studentNumber;
         // 设置IP地址
-        sysLog.setIp(RequestUtils.getIpAddr(request));
-        sysLog.setOperUser(user);
+//        sysLog.setIp(RequestUtils.getIpAddr(request));
+//        sysLog.setOperUser(user);
         // 请求的参数
         Object[] args = joinPoint.getArgs();
         try {
