@@ -1,7 +1,7 @@
 # 应用名称
 spring:
   application:
-    name: oa-config-server
+    name: config-server
   cloud:
     bus:
       enabled: true
@@ -13,10 +13,11 @@ spring:
       server:
         git:
           uri: https://gitee.com/js20166098/spring-cloud-config.git
-          #          default-label: master
-          #          search-paths: /**
+          cloneOnStart: true
+#          default-label: master
+#          search-paths: /**
           username: 18845721152  #账号密码写真实的快一些我觉得，不使用也能访问有点慢
           password: APOTOX4869
-        default-label: master
+#        default-label: master
 server:
   port: 8999 #服务端口
