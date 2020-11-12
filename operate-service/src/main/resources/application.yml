@@ -9,11 +9,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9001/eureka/
-    #    encoder-name:
-    #    register-with-eureka: false
     fetch-registry: false
-  application:
-    name: operation-service
+
 server:
   tomcat:
     # 最大连接线程数，即：并发处理的最大请求数，默认值为 75
@@ -26,10 +23,10 @@ server:
 
 spring:
   cloud:
-    consul:
-      discovery:
-        service-name: operation-service
-        prefer-ip-address: true
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8999/
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
@@ -39,9 +36,6 @@ spring:
     url: jdbc:mysql://60.205.230.70:3306/hd_oa?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
     password: root
     username: root
-
-application:
-  base-package: com.js
 
 mybatis:
   typeAliasesPackage: ${application.base-package}.pojo, ${application.base-package}.vo, ${application.base-package}.dto
@@ -62,9 +56,3 @@ pagehelper:
 
 logging:
   config: classpath:logback-spring.xml
-
-#基本信息
-info:
-  description: 黑大OA签到平台
-  version: v1.0
-  author: 技术部

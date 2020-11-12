@@ -4,3 +4,12 @@ spring:
     name: operation-service
 server:
   port: 8080 #服务端口
+
+application:
+  base-package: com.js
+
+#基本信息
+info:
+  description: 运营模块
+  version: v1.0
+  author: 技术部

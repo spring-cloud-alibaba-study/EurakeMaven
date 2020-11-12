@@ -1,23 +1,15 @@
+server:
+  port: 8999 #服务端口
 # 应用名称
 spring:
   application:
     name: config-server
-  cloud:
-    bus:
-      enabled: true
-      trace:
-        enabled: true
-      refresh:
-        enabled: true
-    config:
-      server:
-        git:
-          uri: https://gitee.com/js20166098/spring-cloud-config.git
-          cloneOnStart: true
-#          default-label: master
-#          search-paths: /**
-          username: 18845721152  #账号密码写真实的快一些我觉得，不使用也能访问有点慢
-          password: APOTOX4869
-#        default-label: master
-server:
-  port: 8999 #服务端口
+
+application:
+  base-package: com.js
+
+#基本信息
+info:
+  description: 动态配置中心
+  version: v1.0
+  author: 技术部

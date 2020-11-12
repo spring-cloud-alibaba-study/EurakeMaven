@@ -9,7 +9,7 @@ eureka:
   client:
     serviceUrl:
       # 注册中心地址
-      defaultZone: http://${eureka.instance.hostname}:9001/eureka/
+      defaultZone: http://127.0.0.1:9001/eureka/
 logging:
   level:
     # log 级别
@@ -35,11 +35,9 @@ spring:
       # 路由（routes：路由，它由唯一标识（ID）、目标服务地址（uri）、一组断言（predicates）和一组过滤器组成（filters）。filters 不是必需参数。）
       routes:
         - id: operation
-          uri: lb://oa-operation-service
+          uri: lb://operation-service
           predicates:
             - Path=/operation/**
-          #      default-filters:
-          #           过滤器（filters：过滤器，过滤规则）
           filters:
             ## 截取路径位数
             - StripPrefix=1

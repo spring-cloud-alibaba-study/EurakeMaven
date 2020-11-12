@@ -1,8 +1,0 @@
-{
-  "properties": [
-    {
-      "name": "eureka.instance.prefer-ip-address",
-      "type": "java.lang.String",
-      "description": "Description for eureka.instance.prefer-ip-address."
-  }
-] }
