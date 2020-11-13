@@ -1,10 +1,12 @@
 package com.js.controller;
 
 import com.github.pagehelper.PageHelper;
+import com.js.config.OperationConfig;
 import com.js.enums.StatusCode;
 import com.js.response.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,12 +22,16 @@ public class HelloController {
     @Value("${spring.datasource.url}")
     private String url;
 
+    @Autowired
+    private OperationConfig operationConfig;
+
     @GetMapping("test")
     @ApiOperation(value = "测试Controller", notes = "测试Controller")
     public BaseResponse<String> testSwagger() {
         //第三种、Mapper接口方式的调用，推荐这种使用方式。
         PageHelper.offsetPage(1, 10);
         System.out.println("测试分支");
-        return new BaseResponse(StatusCode.SUCCESS.getCode(), "String", url);
+        System.out.println(operationConfig.getValue());
+        return new BaseResponse(StatusCode.SUCCESS.getCode(), "String", url + operationConfig.getValue());
     }
 }
