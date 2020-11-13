@@ -10,16 +10,6 @@ server:
 
 
 spring:
-#  cloud:
-#    config:
-#      uri: http://localhost:8999 #微服务启动后先去找3344服务，通过SpringCloudConfig获取GitHub的服务地址
-#      discovery:
-#        enabled: true
-#        serviceId: operation-service
-#      label: 'master'      #分支名称
-#      name: 'operation-service'  #配置文件名称
-#      #读取后缀名称
-#      profile: dev　
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
