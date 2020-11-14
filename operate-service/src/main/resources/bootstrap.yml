@@ -11,7 +11,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://${spring.cloud.client.ip-address}:9001/eureka/
-    fetch-registry: false
+#    fetch-registry: true
+
 # 应用名称
 spring:
   cloud:
@@ -25,7 +26,7 @@ spring:
       #读取后缀名称
       profile: dev　
   application:
-    name: operation-service
+    name: OPERATION-SERVICE
 
 application:
   base-package: com.js
