@@ -4,7 +4,6 @@ import com.js.annotation.Log;
 import com.js.dto.system.SysLogDto;
 import com.js.service.system.SysLogService;
 import com.js.util.IdUtils;
-import com.js.util.RequestUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -14,7 +13,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
