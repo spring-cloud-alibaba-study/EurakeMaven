@@ -7,7 +7,6 @@
         <artifactId>EurakeMaven</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.js</groupId>
     <artifactId>operate-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>operate-service</name>

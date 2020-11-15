@@ -9,8 +9,7 @@
         <artifactId>EurakeMaven</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-    <groupId>com.js</groupId>
+    <description>通用工具Common</description>
     <artifactId>common</artifactId>
     <version>1.0-SNAPSHOT</version>
 
